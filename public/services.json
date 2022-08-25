@@ -1,0 +1,73 @@
+[
+    {
+        "name":"Toyota",
+        "img":"https://images.pexels.com/photos/3874337/pexels-photo-3874337.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "description":"Buying your dream car surely adds enjoyment and fulfilment to your life.",
+        "price":"2000",
+        "quantity":"20",
+        "supplier":"Mr.Ashok Sharma"
+
+    },
+    {
+        "name":"Volkswagen",
+        "img":"https://images.pexels.com/photos/11931661/pexels-photo-11931661.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "description":"Buying your dream car surely adds enjoyment and fulfilment to your life.",
+        "price":"2500",
+        "quantity":"15",
+        "supplier":"Mr.Bibak mitra"
+
+    },
+    {
+        "name":"Daimler",
+        "img":"https://images.pexels.com/photos/12590861/pexels-photo-12590861.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "description":"Buying your dream car surely adds enjoyment and fulfilment to your life.",
+        "price":"3000",
+        "quantity":"30",
+        "supplier":"Mr.Arjun Das"
+
+    },
+    {
+        "name":"Ford Motor",
+        "img":"https://images.pexels.com/photos/12399883/pexels-photo-12399883.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "description":"Buying your dream car surely adds enjoyment and fulfilment to your life.",
+        "price":"5000",
+        "quantity":"17",
+        "supplier":"Mr. Emon khan"
+
+    },
+    {
+        "name":"jeep",
+        "img":"https://images.pexels.com/photos/1682666/pexels-photo-1682666.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "description":"Buying your dream car surely adds enjoyment and fulfilment to your life.",
+        "price":"4500",
+        "quantity":"28",
+        "supplier":"Mr.Rakib islam"
+
+    },
+    {
+        "name":"audi",
+        "img":"https://images.pexels.com/photos/909907/pexels-photo-909907.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "description":"Buying your dream car surely adds enjoyment and fulfilment to your life.",
+        "price":"5000",
+        "quantity":"25",
+        "supplier":"Mr.Ridoy Das"
+
+    },
+    {
+        "name":"ferrari",
+        "img":"https://images.pexels.com/photos/11629361/pexels-photo-11629361.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "description":"Buying your dream car surely adds enjoyment and fulfilment to your life.",
+        "price":"8000",
+        "quantity":"5",
+        "supplier":"Mr.Apurbo singh"
+
+    },
+    {
+        "name":"jaguar",
+        "img":"https://images.pexels.com/photos/315952/pexels-photo-315952.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "description":"Buying your dream car surely adds enjoyment and fulfilment to your life.",
+        "price":"3500",
+        "quantity":"30",
+        "supplier":"Shri Nondita Das"
+    }
+]

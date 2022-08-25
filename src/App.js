@@ -5,6 +5,7 @@ import Home from './Compontents/Pages/Home/Home';
 import Login from './Compontents/Pages/Login/Login';
 import { ToastContainer } from 'react-toastify';
 import Register from './Compontents/Pages/Register/Register';
+import Footer from './Compontents/Footer/Footer';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/register" element={<Register />} />
        
       </Routes>
+      <Footer></Footer>
       <ToastContainer></ToastContainer>
     </div>
   );

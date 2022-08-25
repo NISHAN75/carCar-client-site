@@ -33,7 +33,7 @@ const Header = () => {
       <li><Link to="/" className='font-bold text-white hover:bg-white hover:text-black active:bg-red'>Inventory</Link></li>
       <li><Link to="/" className='font-bold text-white hover:bg-white hover:text-black active:bg-red'>About us</Link></li>
       <li><Link to="/" className='font-bold text-white hover:bg-white hover:text-black active:bg-red'>Contact us</Link></li>
-      <li><Link to="/login" className='font-bold bg-white ml-3' >Login</Link></li> 
+      <li><Link to="/login" className='font-bold bg-white ml-3 hover:text-primary' >Login</Link></li> 
     </ul>
   </div>
   
