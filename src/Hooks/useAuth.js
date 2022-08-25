@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import {getAuth} from 'firebase/auth';
+import { getAuth } from 'firebase/auth';
 const useAuth =()=>{
 
 // Import the functions you need from the SDKs you need
@@ -9,12 +9,12 @@ const useAuth =()=>{
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyAeYfQ5-EUeZi1xaZSaC5mKgz6esxgQbWY",
-    authDomain: "carcare-149ae.firebaseapp.com",
-    projectId: "carcare-149ae",
-    storageBucket: "carcare-149ae.appspot.com",
-    messagingSenderId: "648049186478",
-    appId: "1:648049186478:web:3a7159b6347d4834bc7f3f"
+    apiKey:process.env.REACT_APP_apiKey,
+    authDomain:process.env.REACT_APP_authDomain,
+    projectId:process.env.REACT_APP_projectId,
+    storageBucket:process.env.REACT_APP_storageBucket,
+    messagingSenderId:process.env.REACT_APP_messagingSenderId,
+    appId:process.env.REACT_APP_appId,
   };
 
 // Initialize Firebase

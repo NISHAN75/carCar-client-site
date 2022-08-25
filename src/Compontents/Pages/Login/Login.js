@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import {
-    useAuthState,
-    useSignInWithEmailAndPassword,
-    useSignInWithGoogle,
-  } from "react-firebase-hooks/auth";
-  import { useForm } from "react-hook-form";
-  import { Link, useLocation, useNavigate } from "react-router-dom";
-  import { useSendPasswordResetEmail } from "react-firebase-hooks/auth";
-  import {toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+  useSendPasswordResetEmail, useSignInWithEmailAndPassword,
+  useSignInWithGoogle
+} from "react-firebase-hooks/auth";
+import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import useAuth from '../../../Hooks/useAuth';
 import Loading from '../../Share/Loading/Loading';
 

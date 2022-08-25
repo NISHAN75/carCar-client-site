@@ -2,12 +2,12 @@ import React from "react";
 import {
   useCreateUserWithEmailAndPassword,
   useSignInWithGoogle,
-  useUpdateProfile,
+  useUpdateProfile
 } from "react-firebase-hooks/auth";
 
-import { useForm } from "react-hook-form";
-import { Link, useNavigate } from "react-router-dom";
 import { useSendEmailVerification } from "react-firebase-hooks/auth";
+import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 
 import useAuth from "../../../Hooks/useAuth";
 import Loading from "../../Share/Loading/Loading";
