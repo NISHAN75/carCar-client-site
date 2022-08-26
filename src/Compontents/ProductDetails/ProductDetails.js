@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import 'animate.css';
 
 const ProductDetails = () => {
   const { productId } = useParams();
@@ -61,7 +62,7 @@ const ProductDetails = () => {
 
   return (
     <div className="my-28 mx-10 grid lg:grid-cols-2 gap-14 justify-center items-center">
-      <div class="card w-full bg-base-100 shadow-xl">
+      <div class="card w-full bg-base-100 shadow-xl animate__animated animate__backInLeft animate__delay-0.5s">
         <figure class="px-10 pt-10">
           <img src={product.img} alt="Shoes" class="rounded-xl" />
         </figure>

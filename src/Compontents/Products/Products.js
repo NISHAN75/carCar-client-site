@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Product from "../Product/Product";
+import 'animate.css';
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -12,7 +13,7 @@ const Products = () => {
   }, []);
 
   return (
-    <div className="mx-20">
+    <div className="mx-20 animate__animated animate__backInLeft animate__delay-3s">
       <h2 className="text-center font-bold text-4xl text-primary my-10">
         {" "}
         Inventory Collection

@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import 'animate.css';
 
 const Product = ({product}) => {
     const {img,description,name,price,quantity,_id,supplier}=product;
@@ -16,7 +17,7 @@ const Product = ({product}) => {
                 <p className='font-bold text-left'>Price:<span className='ml-1'>${price}</span></p>
                 <p className='font-bold'>Quantity:<span className='ml-1'>{quantity}</span></p>
                 <div class="card-actions">
-                <button class="btn btn-primary hover:bg-white hover:text-primary mt-3"><Link to={`/inventory/${_id}`}>Update</Link></button>
+                <button class="btn btn-primary hover:bg-white hover:text-black mt-3 animate__animated animate__backInUp animate__delay-3s"><Link to={`/inventory/${_id}`}>Update</Link></button>
                 </div>
             </div>
             </div>

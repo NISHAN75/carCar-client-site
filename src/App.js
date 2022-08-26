@@ -10,6 +10,7 @@ import Products from './Compontents/Products/Products';
 import ProductDetails from './Compontents/ProductDetails/ProductDetails';
 import RequireAuth from './Hooks/RequireAuth';
 
+
 function App() {
   return (
     <div>
