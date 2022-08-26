@@ -2,18 +2,18 @@ import React from "react";
 import {
   useCreateUserWithEmailAndPassword,
   useSignInWithGoogle,
-  useUpdateProfile
+  useUpdateProfile,
 } from "react-firebase-hooks/auth";
 
 import { useSendEmailVerification } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import useAuth from "../../../Hooks/useAuth";
 import Loading from "../../Share/Loading/Loading";
 
 const Register = () => {
-    const [auth] = useAuth();
+  const [auth] = useAuth();
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
@@ -26,6 +26,7 @@ const Register = () => {
     reset,
     handleSubmit,
   } = useForm();
+  const navigate = useNavigate();
   const onSubmit = async (data) => {
     console.log(data);
     const displayName = data.name;
@@ -34,6 +35,7 @@ const Register = () => {
     await updateProfile({ displayName });
     alert("Please Verify Your Email");
     reset();
+    navigate("/");
   };
   let errorElement;
   if (error || gError || verifyError || updateError) {
@@ -52,9 +54,8 @@ const Register = () => {
     return <Loading></Loading>;
   }
 
-
-    return (
-        <section className=" flex h-screen justify-center items-center">
+  return (
+    <section className=" flex h-screen justify-center items-center">
       <div className="card card-compact w-96 shadow-xl">
         <div className="card-body w-full">
           <h2 className="card-title  justify-center mb-10">Please Register</h2>
@@ -172,7 +173,7 @@ const Register = () => {
         </div>
       </div>
     </section>
-    );
+  );
 };
 
 export default Register;

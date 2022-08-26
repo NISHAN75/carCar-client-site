@@ -4,7 +4,7 @@ import {
   useSignInWithGoogle
 } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link ,useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import useAuth from '../../../Hooks/useAuth';
@@ -30,6 +30,7 @@ const Login = () => {
     signInWithEmailAndPassword(data.email, data.password);
     reset();
   };
+  const navigate = useNavigate();
   let errorElement;
   if (error || gError || ResetError) {
     errorElement = (
@@ -42,6 +43,9 @@ const Login = () => {
   }
   if (loading || gLoading || ResetSending) {
     return <Loading></Loading>;
+  }
+  if(user || gUser){
+    navigate('/')
   }
   const resetEmail = async (email) => {
     await sendPasswordResetEmail(email);

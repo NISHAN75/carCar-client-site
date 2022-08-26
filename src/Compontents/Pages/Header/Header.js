@@ -1,7 +1,15 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import useAuth from '../../../Hooks/useAuth';
 
 const Header = () => {
+  const [auth] =useAuth();
+  const [user] =useAuthState(auth);
+  const logOut =() =>{
+    signOut(auth);
+  }
     return (
         <div>
            <div class="navbar bg-primary">
@@ -30,10 +38,14 @@ const Header = () => {
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal p-0">
       <li><Link to="/" className='font-bold text-white hover:bg-white hover:text-black active:bg-red'>Home</Link></li>
-      <li><Link to="/" className='font-bold text-white hover:bg-white hover:text-black active:bg-red'>Inventory</Link></li>
+      <li><Link to="/inventory" className='font-bold text-white hover:bg-white hover:text-black active:bg-red'>Inventory</Link></li>
       <li><Link to="/" className='font-bold text-white hover:bg-white hover:text-black active:bg-red'>About us</Link></li>
       <li><Link to="/" className='font-bold text-white hover:bg-white hover:text-black active:bg-red'>Contact us</Link></li>
-      <li><Link to="/login" className='font-bold bg-white ml-3 hover:text-primary' >Login</Link></li> 
+      <li className='ml-2'>
+      {
+                user? <button className='font-bold bg-white text-primary' onClick={logOut}>Logout</button> : <Link className='font-bold bg-white text-primary' to="/login">Login</Link>
+              }
+      </li>
     </ul>
   </div>
   
