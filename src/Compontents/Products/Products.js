@@ -1,13 +1,13 @@
+import 'animate.css';
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Product from "../Product/Product";
-import 'animate.css';
 
 const Products = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://tranquil-wildwood-06731.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);

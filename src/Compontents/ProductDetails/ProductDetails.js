@@ -1,13 +1,13 @@
+import 'animate.css';
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import 'animate.css';
 
 const ProductDetails = () => {
   const { productId } = useParams();
   const [product, setProduct] = useState({});
 
   useEffect(() => {
-    const url = `http://localhost:5000/products/${productId}`;
+    const url = `https://tranquil-wildwood-06731.herokuapp.com/products/${productId}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setProduct(data));
@@ -18,7 +18,7 @@ const ProductDetails = () => {
     const fieldQuantity = parseInt(product.quantity);
     const addQuantity = fieldQuantity - 1;
     const updateQuantity = { addQuantity };
-    const url = `http://localhost:5000/products/${product._id}`;
+    const url = `https://tranquil-wildwood-06731.herokuapp.com/products/${product._id}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -39,7 +39,7 @@ const ProductDetails = () => {
     const inputQuantity = parseInt(event.target.number.value);
     const addQuantity = fieldQuantity + inputQuantity;
     const updateQuantity = { addQuantity };
-    const url = `http://localhost:5000/products/${product._id}`;
+    const url = `https://tranquil-wildwood-06731.herokuapp.com/products/${product._id}`;
     fetch(url, {
       method: "PUT",
       headers: {
