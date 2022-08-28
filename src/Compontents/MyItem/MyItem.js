@@ -6,13 +6,11 @@ import 'animate.css';
 import useAuth from "../../Hooks/useAuth";
 import { useAuthState } from "react-firebase-hooks/auth";
 
-const ManageDetails = ({product,handleDelete}) => {
-    const {img,name,price,quantity,_id,supplier,email}=product;
+const MyItem = ({item,handleDelete}) => {
+    const {img,name,price,quantity,_id,supplier,email}=item;
     const totalPrice = parseInt(quantity) * parseInt(price);
-    
-   
-  return (
-    <Tr className="my-5 border-primary p-5">
+    return (
+        <Tr className="my-5 border-primary p-5">
       <Td className=" font-bold border-b-4  border-primary">
         <div class="avatar">
           <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
@@ -31,7 +29,7 @@ const ManageDetails = ({product,handleDelete}) => {
         <button onClick={()=> handleDelete(_id)} class="btn btn-primary hover:bg-white hover:text-black mt-3 animate__animated animate__backInUp animate__delay-3s mb-4">Delete</button>
       </Td>
     </Tr>
-  );
+    );
 };
 
-export default ManageDetails;
+export default MyItem;

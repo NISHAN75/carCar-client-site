@@ -4,13 +4,31 @@ import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css";
 import ManageDetails from "./ManageDetails";
 
 const ManageInventory = () => {
-  const [Products, setProducts] = useState([]);
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
     fetch("https://tranquil-wildwood-06731.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
+  const handleDelete = (id) => {
+    console.log(id);
+    const agree = window.confirm("Are You sure want to Delete This Inventory");
+    if (agree) {
+      console.log("click", id);
+      const url = `http://localhost:5000/products/${id}`;
+      fetch(url, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.deletedCount > 0) {
+            const remaining = products.filter((product) => product._id !== id);
+            setProducts(remaining);
+          }
+        });
+    }
+  };
   return (
     <div className="my-10 mx-10">
        
@@ -27,8 +45,8 @@ const ManageInventory = () => {
           </Tr>
         </Thead>
         <Tbody className="my-20">
-          {Products.map((product) => (
-            <ManageDetails product={product} key={product._id}></ManageDetails>
+          {products.map((product) => (
+            <ManageDetails product={product} key={product._id} handleDelete={handleDelete}></ManageDetails>
           ))}
         </Tbody>
       </Table>
