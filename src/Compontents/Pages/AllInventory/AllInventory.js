@@ -1,9 +1,8 @@
-import 'animate.css';
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Product from "../Product/Product";
+import Product from "../../Product/Product";
 
-const Products = () => {
+const AllInventory = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -11,7 +10,6 @@ const Products = () => {
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
-
   return (
     <div className="mx-20 animate__animated animate__backInLeft animate__delay-3s">
       <h2 className="text-center font-bold text-4xl text-primary my-10">
@@ -19,7 +17,7 @@ const Products = () => {
         Inventory Collection
       </h2>
       <div className="grid lg:grid-cols-3 gap-5">
-        {products.slice(0, 6).map((product) => (
+        {products.map((product) => (
           <Product product={product} key={product.id}></Product>
         ))}
       </div>
@@ -32,4 +30,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default AllInventory;

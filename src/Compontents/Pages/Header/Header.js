@@ -39,8 +39,9 @@ const Header = () => {
     <ul class="menu menu-horizontal p-0">
       <li><Link to="/" className='font-bold text-white hover:bg-white hover:text-black active:bg-red'>Home</Link></li>
       <li><Link to="/inventory" className='font-bold text-white hover:bg-white hover:text-black active:bg-red'>Inventory</Link></li>
+      <li><Link to="/manage" className='font-bold text-white hover:bg-white hover:text-black active:bg-red'>Manage Items</Link></li>
       <li><Link to="/" className='font-bold text-white hover:bg-white hover:text-black active:bg-red'>About us</Link></li>
-      <li><Link to="/" className='font-bold text-white hover:bg-white hover:text-black active:bg-red'>Contact us</Link></li>
+      <li><Link to="/contact" className='font-bold text-white hover:bg-white hover:text-black active:bg-red'>Contact us</Link></li>
       <li className='ml-2'>
       {
                 user? <button className='font-bold bg-white text-primary' onClick={logOut}>Logout</button> : <Link className='font-bold bg-white text-primary' to="/login">Login</Link>
