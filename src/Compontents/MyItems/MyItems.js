@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { Table, Thead, Tbody, Tr, Th } from "react-super-responsive-table";
+import { Table, Tbody, Th, Thead, Tr } from "react-super-responsive-table";
 import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css";
 import useAuth from "../../Hooks/useAuth";
 import MyItem from "../MyItem/MyItem";
@@ -14,7 +14,7 @@ const MyItems = () => {
   useEffect(() => {
     const email = user?.email;
     const getMyItems = async () => {
-      const url = `http://localhost:5000/myItems?email=${email}`;
+      const url = `https://tranquil-wildwood-06731.herokuapp.com/myItems?email=${email}`;
       const {data} = await axios.get(url);
       setMyItems(data);
     };
@@ -26,7 +26,7 @@ const MyItems = () => {
     const agree = window.confirm("Are You sure want to Delete This Inventory");
     if (agree) {
       console.log("click", id);
-      const url = `http://localhost:5000/myItems/${id}`;
+      const url = `https://tranquil-wildwood-06731.herokuapp.com/myItems/${id}`;
       fetch(url, {
         method: "DELETE",
       })

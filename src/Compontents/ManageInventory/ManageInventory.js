@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Table, Thead, Tbody, Tr, Th, Td } from "react-super-responsive-table";
+import { Table, Tbody, Th, Thead, Tr } from "react-super-responsive-table";
 import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css";
 import ManageDetails from "./ManageDetails";
 
@@ -16,7 +16,7 @@ const ManageInventory = () => {
     const agree = window.confirm("Are You sure want to Delete This Inventory");
     if (agree) {
       console.log("click", id);
-      const url = `http://localhost:5000/products/${id}`;
+      const url = `https://tranquil-wildwood-06731.herokuapp.com/products/${id}`;
       fetch(url, {
         method: "DELETE",
       })

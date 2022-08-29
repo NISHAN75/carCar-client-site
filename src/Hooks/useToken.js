@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 
 const useToken=user=>{
   const [token,setToken] =useState('');
@@ -8,7 +8,7 @@ const useToken=user=>{
       const email=user?.user?.email
       if(email){
         const { data } = await axios.post(
-          "http://localhost:5000/login",
+          "https://tranquil-wildwood-06731.herokuapp.com/login",
           { email }
         );
         setToken(data.accessToken)

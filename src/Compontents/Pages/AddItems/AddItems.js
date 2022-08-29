@@ -27,7 +27,7 @@ const AddItems = () => {
       img,
     };
     console.log(newInventory);
-    fetch("http://localhost:5000/products", {
+    fetch("https://tranquil-wildwood-06731.herokuapp.com/products", {
       method: "POST",
       headers: {
         "content-type": "application/json",
