@@ -15,7 +15,11 @@ const MyItems = () => {
     const email = user?.email;
     const getMyItems = async () => {
       const url = `https://tranquil-wildwood-06731.herokuapp.com/myItems?email=${email}`;
-      const {data} = await axios.get(url);
+      const {data} = await axios.get(url,{
+        headers:{
+          authorization: `Bearer ${localStorage.getItem('accessToken')}`
+        }
+      });
       setMyItems(data);
     };
     getMyItems();

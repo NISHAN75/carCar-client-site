@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  useAuthState,
   useCreateUserWithEmailAndPassword,
   useSignInWithGoogle,
   useUpdateProfile,
@@ -56,7 +55,7 @@ const Register = () => {
     return <Loading></Loading>;
   }
   if(token){
-    navigate('/home')
+    navigate('/')
   }
   
 
