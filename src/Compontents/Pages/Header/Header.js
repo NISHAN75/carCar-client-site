@@ -42,7 +42,7 @@ const Header = () => {
       <li><Link to="/manage" className='font-bold text-white hover:bg-white hover:text-black active:bg-red'>Manage Items</Link></li>
       <li><Link to="/addItems" className='font-bold text-white hover:bg-white hover:text-black active:bg-red'>Add Items</Link></li>
       <li><Link to="/myItems" className='font-bold text-white hover:bg-white hover:text-black active:bg-red'>My items</Link></li>
-      <li><Link to="/" className='font-bold text-white hover:bg-white hover:text-black active:bg-red'>About us</Link></li>
+      <li><Link to="/blog" className='font-bold text-white hover:bg-white hover:text-black active:bg-red'>Blog</Link></li>
       <li><Link to="/contact" className='font-bold text-white hover:bg-white hover:text-black active:bg-red'>Contact us</Link></li>
       <li className='ml-2'>
       {

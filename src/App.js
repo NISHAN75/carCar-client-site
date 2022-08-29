@@ -13,6 +13,8 @@ import ManageInventory from "./Compontents/ManageInventory/ManageInventory";
 import Contact from "./Compontents/Pages/Contact/Contact";
 import AddItems from "./Compontents/Pages/AddItems/AddItems";
 import MyItems from "./Compontents/MyItems/MyItems";
+import Blogs from "./Compontents/Pages/Blogs/Blogs";
+import BlogDetails from "./Compontents/Pages/BlogDetails/BlogDetails";
 
 function App() {
   return (
@@ -51,6 +53,8 @@ function App() {
           <MyItems></MyItems>
         </RequireAuth>
         } />
+        <Route path="/blog" element={<Blogs />} />
+        <Route path="/blog/:blogId" element={<BlogDetails />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Routes>
