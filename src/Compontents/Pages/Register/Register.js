@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  useAuthState,
   useCreateUserWithEmailAndPassword,
   useSignInWithGoogle,
   useUpdateProfile,
@@ -10,6 +11,7 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 
 import useAuth from "../../../Hooks/useAuth";
+import useToken from "../../../Hooks/useToken";
 import Loading from "../../Share/Loading/Loading";
 
 const Register = () => {
@@ -26,7 +28,8 @@ const Register = () => {
     reset,
     handleSubmit,
   } = useForm();
-  const navigate = useNavigate();
+  const [token]=useToken(user || gUser);
+  const navigate=useNavigate();
   const onSubmit = async (data) => {
     console.log(data);
     const displayName = data.name;
@@ -35,7 +38,6 @@ const Register = () => {
     await updateProfile({ displayName });
     alert("Please Verify Your Email");
     reset();
-    navigate("/");
   };
   let errorElement;
   if (error || gError || verifyError || updateError) {
@@ -53,6 +55,10 @@ const Register = () => {
   if (loading || gLoading || verifySending || updatingLoading) {
     return <Loading></Loading>;
   }
+  if(token){
+    navigate('/home')
+  }
+  
 
   return (
     <section className=" flex h-screen justify-center items-center">

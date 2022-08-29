@@ -4,10 +4,11 @@ import {
   useSignInWithGoogle
 } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
-import { Link ,useNavigate } from "react-router-dom";
+import { Link ,useNavigate ,useLocation} from "react-router-dom";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import useAuth from '../../../Hooks/useAuth';
+import useToken from '../../../Hooks/useToken';
 import Loading from '../../Share/Loading/Loading';
 
 
@@ -19,19 +20,23 @@ const Login = () => {
     useSignInWithEmailAndPassword(auth);
   const [sendPasswordResetEmail, ResetSending, ResetError] =
     useSendPasswordResetEmail(auth);
+    const [token]=useToken(user || gUser);
+
   const {
     register,
     formState: { errors },
     reset,
     handleSubmit,
   } = useForm();
-  const onSubmit = (data) => {
+  const onSubmit = async(data) => {
     setEmail(data.email);
-    signInWithEmailAndPassword(data.email, data.password);
+   await signInWithEmailAndPassword(data.email, data.password);
     reset();
   };
   const navigate = useNavigate();
-  let errorElement;
+  const location = useLocation();
+  let form = location.state?.from?.pathname || "/";
+  let errorElement = "";
   if (error || gError || ResetError) {
     errorElement = (
       <p className="text-red-500 mb-5">
@@ -44,8 +49,8 @@ const Login = () => {
   if (loading || gLoading || ResetSending) {
     return <Loading></Loading>;
   }
-  if(user || gUser){
-    navigate('/')
+  if (token) {
+    navigate(form, {replace: true});
   }
   const resetEmail = async (email) => {
     await sendPasswordResetEmail(email);
