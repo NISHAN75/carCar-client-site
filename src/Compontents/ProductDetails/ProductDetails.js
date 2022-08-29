@@ -62,12 +62,12 @@ const ProductDetails = () => {
 
   return (
     <div className="my-28 mx-10 grid lg:grid-cols-2 gap-14 justify-center items-center">
-      <div class="card w-full bg-base-100 shadow-xl animate__animated animate__backInLeft animate__delay-0.5s">
-        <figure class="px-10 pt-10">
-          <img src={product.img} alt="Shoes" class="rounded-xl" />
+      <div className="card w-full bg-base-100 shadow-xl animate__animated animate__backInLeft animate__delay-0.5s">
+        <figure className="px-10 pt-10">
+          <img src={product.img} alt="Shoes" className="rounded-xl" />
         </figure>
-        <div class="card-body items-center text-center">
-          <h2 class="card-title">
+        <div className="card-body items-center text-center">
+          <h2 className="card-title">
             Name:<span className="text-primary">{product.name}</span>
           </h2>
 
@@ -84,8 +84,8 @@ const ProductDetails = () => {
           <p className="font-bold">
           totalPrice:<span className="ml-1">${totalPrice}</span>
           </p>
-          <div class="card-actions">
-                <button onClick={deliveredHandle} class="btn btn-primary px-10 hover:bg-white hover:text-primary mt-3">Delivered</button>
+          <div className="card-actions">
+                <button onClick={deliveredHandle} className="btn btn-primary px-10 hover:bg-white hover:text-primary mt-3">Delivered</button>
                 </div>
         </div>
       </div>
@@ -97,7 +97,7 @@ const ProductDetails = () => {
             name="number"
             required
             placeholder=" Add Quantity"
-            class="input input-bordered input-primary w-full max-w-xs"
+            className="input input-bordered input-primary w-full max-w-xs"
           />
           <br/>
           <button className="btn btn-primary mt-5 px-10">Add quantity</button>

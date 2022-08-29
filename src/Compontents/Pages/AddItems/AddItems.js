@@ -47,14 +47,14 @@ const AddItems = () => {
             <form onSubmit={handleInventory}>
             <input type="email" disabled
                 value={user.email}
-                readOnly placeholder="Enter Your Email" name='email' class="input input-bordered input-primary w-full max-w-xs" required/><br/>
-            <input type="text" placeholder="Enter Car Name" name='Carname' class="input input-bordered input-primary w-full max-w-xs mt-5" required /><br/>
-            <input type="text" placeholder="Enter Description" class="input input-bordered input-primary w-full max-w-xs mt-5" name='description' required /><br/>
-            <input type="number" placeholder="Enter Price" name='priceNumber' class="input input-bordered input-primary w-full max-w-xs mt-5" required /><br/>
-            <input type="number" placeholder="Enter Quantity" name='quantityNumber' class="input input-bordered input-primary w-full max-w-xs mt-5" required /><br/>
-            <input type="text" placeholder="Enter Supplier Name" name='supplierName' class="input input-bordered input-primary w-full max-w-xs mt-5" required /><br/>
-            <input type="text" placeholder="Enter Phote Url" name='photoUrl' class="input input-bordered input-primary w-full max-w-xs mt-5" required /><br/>
-            <input type="submit" value="Submit" class="btn btn-primary w-1/4 mt-5" required />
+                readOnly placeholder="Enter Your Email" name='email' className="input input-bordered input-primary w-full max-w-xs" required/><br/>
+            <input type="text" placeholder="Enter Car Name" name='Carname' className="input input-bordered input-primary w-full max-w-xs mt-5" required /><br/>
+            <input type="text" placeholder="Enter Description" className="input input-bordered input-primary w-full max-w-xs mt-5" name='description' required /><br/>
+            <input type="number" placeholder="Enter Price" name='priceNumber' className="input input-bordered input-primary w-full max-w-xs mt-5" required /><br/>
+            <input type="number" placeholder="Enter Quantity" name='quantityNumber' className="input input-bordered input-primary w-full max-w-xs mt-5" required /><br/>
+            <input type="text" placeholder="Enter Supplier Name" name='supplierName' className="input input-bordered input-primary w-full max-w-xs mt-5" required /><br/>
+            <input type="text" placeholder="Enter Phote Url" name='photoUrl' className="input input-bordered input-primary w-full max-w-xs mt-5" required /><br/>
+            <input type="submit" value="Submit" className="btn btn-primary w-1/4 mt-5" required />
             </form>
             
         </div>
