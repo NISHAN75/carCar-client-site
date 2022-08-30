@@ -17,7 +17,7 @@ const Product = ({product}) => {
                 <p className='font-bold text-left'>Price:<span className='ml-1'>${price}</span></p>
                 <p className='font-bold'>Quantity:<span className='ml-1'>{quantity}</span></p>
                 <div className="card-actions">
-                <button className="btn btn-primary hover:bg-white hover:text-black mt-3 animate__animated animate__backInUp animate__delay-3s"><Link to={`/inventory/${_id}`}>Update</Link></button>
+                <button className="btn btn-primary text-white hover:bg-white hover:text-primary mt-3 animate__animated animate__backInUp animate__delay-3s"><Link to={`/inventory/${_id}`}>Update</Link></button>
                 </div>
             </div>
             </div>

@@ -24,7 +24,7 @@ const SubBanner = () => {
           information display. This car has forward collision alert/warning.
           This car comes with enough seats for 5. You can relax.
         </p>
-        <button className="btn btn-primary mt-3 hover:bg-white">
+        <button className="btn btn-primary mt-3 text-white hover:bg-white hover:text-primary">
           <Link to="/contact">Contact</Link>
         </button>
       </div>

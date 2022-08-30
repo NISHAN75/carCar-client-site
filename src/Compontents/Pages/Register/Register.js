@@ -8,6 +8,7 @@ import {
 import { useSendEmailVerification } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 import useAuth from "../../../Hooks/useAuth";
 import useToken from "../../../Hooks/useToken";
@@ -35,7 +36,8 @@ const Register = () => {
     await createUserWithEmailAndPassword(data.email, data.password, data.name);
     await sendEmailVerification();
     await updateProfile({ displayName });
-    alert("Please Verify Your Email");
+    toast("Your Register is successfull")
+    toast("Please Verify Your Email");
     reset();
   };
   let errorElement;

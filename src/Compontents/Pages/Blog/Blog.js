@@ -15,7 +15,7 @@ const Blog = ({ blog }) => {
           <h2 class="card-title text-primary">{name}</h2>
           <p>{short}</p>
           <div class="card-actions mt-10">
-            <button className="btn btn-primary absolute bottom-0 left-0 w-full hover:bg-white hover:text-black mt-3">
+            <button className="btn btn-primary absolute bottom-0 left-0 w-full   hover:text-white mt-3">
               <Link to={`/blog/${_id}`}>Explore More</Link>
             </button>
           </div>

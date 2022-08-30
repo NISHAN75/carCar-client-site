@@ -24,7 +24,7 @@ const Products = () => {
         ))}
       </div>
       <div className="m-btn-area w-50 mx-auto text-center mt-5">
-        <button className="btn btn-primary text-white my-5 hover:bg-white hover:text-black">
+        <button className="btn btn-primary text-white my-5 hover:bg-white hover:text-primary">
           <Link to="/manage">Manage Items</Link>{" "}
         </button>
       </div>

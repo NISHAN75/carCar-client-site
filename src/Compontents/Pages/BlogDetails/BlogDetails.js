@@ -11,7 +11,7 @@ const BlogDetails = () => {
       .then((data) => setBlog(data));
   }, []);
   return (
-    <div class="card shadow-xl w-full mx-10 my-10">
+    <div class="card w-full my-20">
       <figure>
         <img src={blog.img} className="w-3/4 rounded-lg" alt="Shoes" />
       </figure>

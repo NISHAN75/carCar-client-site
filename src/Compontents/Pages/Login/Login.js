@@ -31,6 +31,7 @@ const Login = () => {
   const onSubmit = async(data) => {
     setEmail(data.email);
    await signInWithEmailAndPassword(data.email, data.password);
+
     reset();
   };
   const navigate = useNavigate();
@@ -51,6 +52,8 @@ const Login = () => {
   }
   if (token) {
     navigate(form, {replace: true});
+    
+    
   }
   const resetEmail = async (email) => {
     await sendPasswordResetEmail(email);

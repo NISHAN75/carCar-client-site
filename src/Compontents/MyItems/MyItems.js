@@ -5,26 +5,41 @@ import { Table, Tbody, Th, Thead, Tr } from "react-super-responsive-table";
 import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css";
 import useAuth from "../../Hooks/useAuth";
 import MyItem from "../MyItem/MyItem";
+import { toast } from 'react-toastify';
+import { useNavigate } from "react-router-dom";
+import { signOut } from 'firebase/auth';
 
 const MyItems = () => {
   const [auth] = useAuth();
   const [user] = useAuthState(auth);
   const [myItems, setMyItems] = useState([]);
+  const navigate=useNavigate();
+
 
   useEffect(() => {
     const email = user?.email;
     const getMyItems = async () => {
       const url = `https://tranquil-wildwood-06731.herokuapp.com/myItems?email=${email}`;
-      const {data} = await axios.get(url,{
-        headers:{
-          authorization: `Bearer ${localStorage.getItem('accessToken')}`
-        }
-      });
-      setMyItems(data);
+      try{
+        const {data} = await axios.get(url,{
+          headers:{
+            authorization: `Bearer ${localStorage.getItem('accessToken')}`
+          }
+        });
+        setMyItems(data);
+      }
+      catch(error){
+        toast(error.message);
+          signOut(auth);
+          navigate('/login');
+         
+      }
+      
+      
     };
     getMyItems();
   }, [user]);
-  console.log(myItems);
+
 
   const handleDelete = (id) => {
     const agree = window.confirm("Are You sure want to Delete This Inventory");

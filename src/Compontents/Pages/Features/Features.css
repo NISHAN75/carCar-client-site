@@ -38,8 +38,9 @@ body {
   object-fit: cover;
 }
 .swiper-button-prev ,.swiper-button-next{
-    color: #F59B00;
+    display: none;
 }
 span.swiper-pagination-bullet {
+  margin-top: 10px;
     background-color: #F59B00;
 }

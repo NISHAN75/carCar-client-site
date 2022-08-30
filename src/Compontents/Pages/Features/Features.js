@@ -50,7 +50,7 @@ const Features = () => {
                   amount of buzz and a lot of very happy customers this weekend.
                 </p>
                 <div className="card-actions mt-8">
-                  <button className="btn btn-primary absolute bottom-0 left-0 w-full hover:bg-white ">
+                  <button className="btn btn-primary absolute bottom-0 left-0 w-full hover:text-white">
                     Explore More
                   </button>
                 </div>
@@ -72,7 +72,7 @@ const Features = () => {
                   amount of buzz and a lot of very happy customers this weekend.
                 </p>
                 <div className="card-actions mt-8">
-                  <button className="btn btn-primary absolute bottom-0 left-0 w-full hover:bg-white ">
+                  <button className="btn btn-primary absolute bottom-0 left-0 w-full hover:text-white">
                     Explore More
                   </button>
                 </div>
@@ -94,7 +94,7 @@ const Features = () => {
                   amount of buzz and a lot of very happy customers this weekend.
                 </p>
                 <div className="card-actions mt-8">
-                  <button className="btn btn-primary absolute bottom-0 left-0 w-full hover:bg-white ">
+                  <button className="btn btn-primary absolute bottom-0 left-0 w-full hover:text-white">
                     Explore More
                   </button>
                 </div>
@@ -120,7 +120,7 @@ const Features = () => {
                   amount of buzz and a lot of very happy customers this weekend.
                 </p>
                 <div className="card-actions mt-8">
-                  <button className="btn btn-primary absolute bottom-0 left-0 w-full hover:bg-white ">
+                  <button className="btn btn-primary absolute bottom-0 left-0 w-full hover:text-white">
                     Explore More
                   </button>
                 </div>
@@ -142,7 +142,7 @@ const Features = () => {
                   amount of buzz and a lot of very happy customers this weekend.
                 </p>
                 <div className="card-actions mt-8">
-                  <button className="btn btn-primary absolute bottom-0 left-0 w-full hover:bg-white ">
+                  <button className="btn btn-primary absolute bottom-0 left-0 w-full hover:text-white">
                     Explore More
                   </button>
                 </div>
@@ -164,7 +164,7 @@ const Features = () => {
                   amount of buzz and a lot of very happy customers this weekend.
                 </p>
                 <div className="card-actions mt-8">
-                  <button className="btn btn-primary absolute bottom-0 left-0 w-full hover:bg-white ">
+                  <button className="btn btn-primary absolute bottom-0 left-0 w-full hover:text-white">
                     Explore More
                   </button>
                 </div>
@@ -190,7 +190,7 @@ const Features = () => {
                   amount of buzz and a lot of very happy customers this weekend.
                 </p>
                 <div className="card-actions mt-8">
-                  <button className="btn btn-primary absolute bottom-0 left-0 w-full hover:bg-white ">
+                  <button className="btn btn-primary absolute bottom-0 left-0 w-full hover:text-white">
                     Explore More
                   </button>
                 </div>
@@ -212,7 +212,7 @@ const Features = () => {
                   amount of buzz and a lot of very happy customers this weekend.
                 </p>
                 <div className="card-actions mt-8">
-                  <button className="btn btn-primary absolute bottom-0 left-0 w-full hover:bg-white ">
+                  <button className="btn btn-primary absolute bottom-0 left-0 w-full hover:text-white">
                     Explore More
                   </button>
                 </div>
@@ -234,7 +234,7 @@ const Features = () => {
                   amount of buzz and a lot of very happy customers this weekend.
                 </p>
                 <div className="card-actions mt-8">
-                  <button className="btn btn-primary absolute bottom-0 left-0 w-full hover:bg-white ">
+                  <button className="btn btn-primary absolute bottom-0 left-0 w-full hover:text-white">
                     Explore More
                   </button>
                 </div>
@@ -260,7 +260,7 @@ const Features = () => {
                   amount of buzz and a lot of very happy customers this weekend.
                 </p>
                 <div className="card-actions mt-8">
-                  <button className="btn btn-primary absolute bottom-0 left-0 w-full hover:bg-white ">
+                  <button className="btn btn-primary absolute bottom-0 left-0 w-full hover:text-white">
                     Explore More
                   </button>
                 </div>
@@ -282,7 +282,7 @@ const Features = () => {
                   amount of buzz and a lot of very happy customers this weekend.
                 </p>
                 <div className="card-actions mt-8">
-                  <button className="btn btn-primary absolute bottom-0 left-0 w-full hover:bg-white ">
+                  <button className="btn btn-primary absolute bottom-0 left-0 w-full hover:text-white">
                     Explore More
                   </button>
                 </div>
@@ -304,7 +304,7 @@ const Features = () => {
                   amount of buzz and a lot of very happy customers this weekend.
                 </p>
                 <div className="card-actions mt-8">
-                  <button className="btn btn-primary absolute bottom-0 left-0 w-full hover:bg-white ">
+                  <button className="btn btn-primary absolute bottom-0 left-0 w-full hover:text-white">
                     Explore More
                   </button>
                 </div>
@@ -330,7 +330,7 @@ const Features = () => {
                   amount of buzz and a lot of very happy customers this weekend.
                 </p>
                 <div className="card-actions mt-8">
-                  <button className="btn btn-primary absolute bottom-0 left-0 w-full hover:bg-white ">
+                  <button className="btn btn-primary absolute bottom-0 left-0 w-full hover:text-white">
                     Explore More
                   </button>
                 </div>
@@ -352,7 +352,7 @@ const Features = () => {
                   amount of buzz and a lot of very happy customers this weekend.
                 </p>
                 <div className="card-actions mt-8">
-                  <button className="btn btn-primary absolute bottom-0 left-0 w-full hover:bg-white ">
+                  <button className="btn btn-primary absolute bottom-0 left-0 w-full hover:text-white">
                     Explore More
                   </button>
                 </div>
@@ -374,7 +374,7 @@ const Features = () => {
                   amount of buzz and a lot of very happy customers this weekend.
                 </p>
                 <div className="card-actions mt-8">
-                  <button className="btn btn-primary absolute bottom-0 left-0 w-full hover:bg-white ">
+                  <button className="btn btn-primary absolute bottom-0 left-0 w-full hover:text-white">
                     Explore More
                   </button>
                 </div>
@@ -400,7 +400,7 @@ const Features = () => {
                   amount of buzz and a lot of very happy customers this weekend.
                 </p>
                 <div className="card-actions mt-8">
-                  <button className="btn btn-primary absolute bottom-0 left-0 w-full hover:bg-white ">
+                  <button className="btn btn-primary absolute bottom-0 left-0 w-full hover:text-white">
                     Explore More
                   </button>
                 </div>
@@ -422,7 +422,7 @@ const Features = () => {
                   amount of buzz and a lot of very happy customers this weekend.
                 </p>
                 <div className="card-actions mt-8">
-                  <button className="btn btn-primary absolute bottom-0 left-0 w-full hover:bg-white ">
+                  <button className="btn btn-primary absolute bottom-0 left-0 w-full hover:text-white">
                     Explore More
                   </button>
                 </div>
@@ -444,7 +444,7 @@ const Features = () => {
                   amount of buzz and a lot of very happy customers this weekend.
                 </p>
                 <div className="card-actions mt-8">
-                  <button className="btn btn-primary absolute bottom-0 left-0 w-full hover:bg-white ">
+                  <button className="btn btn-primary absolute bottom-0 left-0 w-full hover:text-white">
                     Explore More
                   </button>
                 </div>

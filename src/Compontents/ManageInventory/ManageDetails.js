@@ -25,8 +25,8 @@ const ManageDetails = ({product,handleDelete}) => {
       <Td className=" font-bold border-b-4 border-primary"><p>${totalPrice}</p></Td>
       <Td className=" font-bold border-b-4  border-primary "><h5>{supplier}</h5></Td>
       <Td className=" font-bold border-b-4  border-primary">
-        <button className="btn btn-primary hover:bg-white hover:text-black mt-3 animate__animated animate__backInUp animate__delay-2s"><Link to={`/inventory/${_id}`}>Update</Link></button><br/>
-        <button onClick={()=> handleDelete(_id)} className="btn btn-primary hover:bg-white hover:text-black mt-3 animate__animated animate__backInUp animate__delay-3s mb-4">Delete</button>
+        <button className="btn btn-primary text-white hover:bg-white hover:text-primary  mt-3 animate__animated animate__backInUp animate__delay-2s"><Link to={`/inventory/${_id}`}>Update</Link></button><br/>
+        <button onClick={()=> handleDelete(_id)} className="btn btn-primary text-white hover:bg-white hover:text-primary mt-3 animate__animated animate__backInUp animate__delay-3s mb-4">Delete</button>
       </Td>
     </Tr>
   );
