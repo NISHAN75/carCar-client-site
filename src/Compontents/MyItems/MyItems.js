@@ -8,6 +8,7 @@ import MyItem from "../MyItem/MyItem";
 import { toast } from 'react-toastify';
 import { useNavigate } from "react-router-dom";
 import { signOut } from 'firebase/auth';
+import { FaRegPaperPlane , FaTrashAlt } from "react-icons/fa";
 
 const MyItems = () => {
   const [auth] = useAuth();

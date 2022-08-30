@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { IconName } from "react-icons/fa";
+
 
 const Blog = ({ blog }) => {
     

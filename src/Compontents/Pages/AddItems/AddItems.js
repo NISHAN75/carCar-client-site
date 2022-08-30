@@ -56,7 +56,7 @@ const AddItems = () => {
             <input type="number" placeholder="Enter Quantity" name='quantityNumber' className="input input-bordered input-primary w-full max-w-xs mt-5" required /><br/>
             <input type="text" placeholder="Enter Supplier Name" name='supplierName' className="input input-bordered input-primary w-full max-w-xs mt-5" required /><br/>
             <input type="text" placeholder="Enter Phote Url" name='photoUrl' className="input input-bordered input-primary w-full max-w-xs mt-5" required /><br/>
-            <input type="submit" value="Submit" className="btn btn-primary w-1/4 mt-5" required />
+            <input type="submit" value="Submit" className="btn btn-primary hover:text-white w-1/4 mt-5" required />
             </form>
             
         </div>

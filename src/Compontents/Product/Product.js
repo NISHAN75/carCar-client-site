@@ -1,6 +1,8 @@
 import 'animate.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaRegPaperPlane } from "react-icons/fa";
+
 
 const Product = ({product}) => {
     const {img,description,name,price,quantity,_id,supplier}=product;
@@ -17,7 +19,7 @@ const Product = ({product}) => {
                 <p className='font-bold text-left'>Price:<span className='ml-1'>${price}</span></p>
                 <p className='font-bold'>Quantity:<span className='ml-1'>{quantity}</span></p>
                 <div className="card-actions">
-                <button className="btn btn-primary text-white hover:bg-white hover:text-primary mt-3 animate__animated animate__backInUp animate__delay-3s"><Link to={`/inventory/${_id}`}>Update</Link></button>
+                <button className="btn btn-primary text-white hover:bg-white hover:text-primary mt-3 animate__animated animate__backInUp animate__delay-3s"><Link className='flex' to={`/inventory/${_id}`}>Update <span className='ml-2'><FaRegPaperPlane/></span></Link></button>
                 </div>
             </div>
             </div>
