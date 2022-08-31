@@ -7,11 +7,12 @@ import SubBanner from '../SubBanner/SubBanner';
 import SubCard from '../SubCard/SubCard';
 
 
+
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <SubCard ></SubCard>
+            <SubCard></SubCard>
             <Products></Products>
             <SubBanner></SubBanner>
             <Features></Features>

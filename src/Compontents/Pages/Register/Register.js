@@ -62,7 +62,7 @@ const Register = () => {
   
 
   return (
-    <section className=" flex h-screen justify-center items-center">
+    <section className=" flex h-3/4 my-20 justify-center items-center">
       <div className="card card-compact w-96 shadow-xl">
         <div className="card-body w-full">
           <h2 className="card-title  justify-center mb-10">Please Register</h2>
@@ -164,7 +164,8 @@ const Register = () => {
             </form>
             <p className="text-xl text-primary text-center">
               <small>
-                <Link to="/login">Already Have a Account? please Login</Link>
+                <span className='text-black font-bold mr-2'>Already Have a Account?</span>
+                <Link className="font-bold text-primary" to="/login"> Please Login</Link>
               </small>
             </p>
             <div className="flex flex-col w-full border-opacity-50">

@@ -2,18 +2,22 @@ import 'animate.css';
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Product from "../Product/Product";
+import Loading from "../Share/Loading/Loading"
 
 const Products = () => {
+ 
   const [products, setProducts] = useState([]);
+ 
 
   useEffect(() => {
     fetch("https://tranquil-wildwood-06731.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
+  
 
   return (
-    <div className="mx-20 animate__animated animate__backInLeft animate__delay-3s">
+    <div className="mx-20 " >
       <h2 className="text-center font-bold text-4xl text-primary my-10">
         {" "}
         Inventory Collection

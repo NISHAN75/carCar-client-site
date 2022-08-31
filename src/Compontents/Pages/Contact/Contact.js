@@ -2,7 +2,10 @@ import React from 'react';
 
 const Contact = () => {
     return (
-        <div className='my-20 p-5'>
+        <div className='my-20 p-5' data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+        data-aos-delay="300"
+        data-aos-offset="0">
             <h5 className='text-5xl font-bold text-primary text-center'>Contact Us</h5>
 
             <div className='forom-info text-center mt-20'>

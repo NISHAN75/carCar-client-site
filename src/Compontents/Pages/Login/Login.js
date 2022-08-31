@@ -4,7 +4,7 @@ import {
   useSignInWithGoogle
 } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
-import { Link ,useNavigate ,useLocation} from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import useAuth from '../../../Hooks/useAuth';
@@ -12,15 +12,18 @@ import useToken from '../../../Hooks/useToken';
 import Loading from '../../Share/Loading/Loading';
 
 
+
+
+
 const Login = () => {
-    const [email, setEmail] = useState("");
+  const [email, setEmail] = useState("");
   const [auth] = useAuth();
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
   const [sendPasswordResetEmail, ResetSending, ResetError] =
     useSendPasswordResetEmail(auth);
-    const [token]=useToken(user || gUser);
+  const [token] = useToken(user || gUser);
 
   const {
     register,
@@ -28,9 +31,9 @@ const Login = () => {
     reset,
     handleSubmit,
   } = useForm();
-  const onSubmit = async(data) => {
+  const onSubmit = async (data) => {
     setEmail(data.email);
-   await signInWithEmailAndPassword(data.email, data.password);
+    await signInWithEmailAndPassword(data.email, data.password);
 
     reset();
   };
@@ -51,9 +54,9 @@ const Login = () => {
     return <Loading></Loading>;
   }
   if (token) {
-    navigate(form, {replace: true});
-    
-    
+    navigate(form, { replace: true });
+
+
   }
   const resetEmail = async (email) => {
     await sendPasswordResetEmail(email);
@@ -61,8 +64,8 @@ const Login = () => {
       toast("Sent email");
     }
   };
-    return (
-        <section className=" flex h-screen justify-center items-center">
+  return (
+    <section className=" flex h-3/4 my-20 justify-center items-center">
       <div className="card card-compact w-96 shadow-xl">
         <div className="card-body w-full">
           <h2 className="card-title  justify-center mb-10 text-primary">
@@ -141,10 +144,11 @@ const Login = () => {
                 value="Login"
               />
             </form>
-            <p className="text-xl text-primary text-center">
-              <small>
-                <Link to="/register">
-                  You hava No account ? Please Register
+            <p className="text-xl text-center">
+              <small >
+                <span className='text-black font-bold mr-2'>You hava No account ?</span>
+                <Link className='text-primary font-bold' to="/register">
+                  Please Register
                 </Link>
               </small>
             </p>
@@ -152,7 +156,7 @@ const Login = () => {
               className="text-xl text-primary text-center"
               onClick={() => resetEmail(email)}
             >
-              <small>Reset Your Password?</small>
+              <button className='font-bold text-sm text-primary'>Reset Your Password?</button>
             </p>
             <div className="flex flex-col w-full border-opacity-50">
               <div className="divider">OR</div>
@@ -167,7 +171,7 @@ const Login = () => {
         </div>
       </div>
     </section>
-    );
+  );
 };
 
 export default Login;
