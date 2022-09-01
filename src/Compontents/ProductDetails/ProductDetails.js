@@ -1,6 +1,7 @@
 import 'animate.css';
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { toast } from 'react-toastify';
 
 const ProductDetails = () => {
   const { productId } = useParams();
@@ -31,6 +32,7 @@ const ProductDetails = () => {
         const quantity = updateQuantity.addQuantity;
         const newProduct = { ...product, quantity };
         setProduct(newProduct);
+        toast("Your Delivered is successfully");
       });
   };
   const handleAddQuantity = (event) => {
@@ -53,6 +55,7 @@ const ProductDetails = () => {
           const quantity = updateQuantity.addQuantity;
           const newProduct = { ...product, quantity };
           setProduct(newProduct);
+          toast("Restock is successfully");
           event.target.reset();
         }
       });
