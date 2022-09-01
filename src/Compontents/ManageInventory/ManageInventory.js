@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Table, Tbody, Th, Thead, Tr } from "react-super-responsive-table";
 import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css";
 import ManageDetails from "./ManageDetails";
+import { toast } from "react-toastify";
 
 const ManageInventory = () => {
   const [products, setProducts] = useState([]);
@@ -25,6 +26,7 @@ const ManageInventory = () => {
           if (data.deletedCount > 0) {
             const remaining = products.filter((product) => product._id !== id);
             setProducts(remaining);
+            toast("Delete Sucessfully Selected items");
           }
         });
     }

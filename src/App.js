@@ -15,6 +15,8 @@ import AddItems from "./Compontents/Pages/AddItems/AddItems";
 import MyItems from "./Compontents/MyItems/MyItems";
 import Blogs from "./Compontents/Pages/Blogs/Blogs";
 import BlogDetails from "./Compontents/Pages/BlogDetails/BlogDetails";
+import NotFound from "./Compontents/NotFound/NotFound";
+
 
 function App() {
   return (
@@ -57,6 +59,7 @@ function App() {
         <Route path="/blog/:blogId" element={<BlogDetails />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer></Footer>
       <ToastContainer></ToastContainer>

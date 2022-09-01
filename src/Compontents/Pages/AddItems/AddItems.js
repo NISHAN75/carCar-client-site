@@ -1,7 +1,8 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { toast } from 'react-toastify';
 import useAuth from '../../../Hooks/useAuth';
+import { toast } from "react-toastify";
+
 
 const AddItems = () => {
     const [auth] = useAuth();
@@ -37,8 +38,6 @@ const AddItems = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log("success", data);
-        alert("Add A Inventory Successfully");
         toast("Your products add Successfully");
         event.target.reset();
       });

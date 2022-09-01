@@ -5,9 +5,9 @@ import Product from "../Product/Product";
 import Loading from "../Share/Loading/Loading"
 
 const Products = () => {
- 
+
   const [products, setProducts] = useState([]);
- 
+
 
   useEffect(() => {
     fetch("https://tranquil-wildwood-06731.herokuapp.com/products")

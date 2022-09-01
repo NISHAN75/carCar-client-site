@@ -5,10 +5,10 @@ import { Table, Tbody, Th, Thead, Tr } from "react-super-responsive-table";
 import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css";
 import useAuth from "../../Hooks/useAuth";
 import MyItem from "../MyItem/MyItem";
-import { toast } from 'react-toastify';
 import { useNavigate } from "react-router-dom";
 import { signOut } from 'firebase/auth';
 import { FaRegPaperPlane , FaTrashAlt } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const MyItems = () => {
   const [auth] = useAuth();
@@ -55,6 +55,7 @@ const MyItems = () => {
           if (data.deletedCount > 0) {
             const remaining = myItems.filter((item) => item._id !== id);
             setMyItems(remaining);
+            toast("Delete Sucessfully Selected items");
           }
         });
     }

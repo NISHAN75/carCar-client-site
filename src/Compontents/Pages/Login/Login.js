@@ -55,6 +55,7 @@ const Login = () => {
   }
   if (token) {
     navigate(form, { replace: true });
+    toast('Login Successfully')
 
 
   }
