@@ -2,7 +2,6 @@ import 'animate.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaRegPaperPlane } from "react-icons/fa";
-import Loading from "../Share/Loading/Loading"
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 AOS.init({
@@ -32,9 +31,7 @@ AOS.init();
 
 
 const Product = ({product}) => {
-    if(!product){
-        <Loading></Loading>
-    }
+    
     const {img,description,name,price,quantity,_id,supplier}=product;
     return (
         <div  data-aos="fade-up"
